@@ -1,0 +1,4 @@
+246,363,362,374,251,363,361,363,361,373,251,373,ccaggeaee,compersity,0.5301886200904846,0.20325403577751583,0.5022222968665037,/content/outputs/inference/answersheet/model_finetune_640_results/res_16562fb601b9c4c4fe07b24f92f466dc_jpg_0.pkl
+65,4,88,16,65,4,87,4,87,15,65,15,taaaaaarrreteeee,and,0.5649852156639099,0.1411977019160986,0.5908332727849483,/content/outputs/inference/answersheet/model_finetune_640_results/res_16562fb601b9c4c4fe07b24f92f466dc_jpg_1.pkl
+167,3,211,14,167,3,210,3,210,13,167,13,etaeeee,the,0.508415699005127,0.2614357311810766,0.5439350605010986,/content/outputs/inference/answersheet/model_finetune_640_results/res_16562fb601b9c4c4fe07b24f92f466dc_jpg_2.pkl
+262,186,285,195,262,186,284,186,284,194,262,194,gsaassssssssysssyyssyyyyyy,get,0.5816375017166138,0.1281652502142466,0.5461117699742317,/content/outputs/inference/answersheet/model_finetune_640_results/res_16562fb601b9c4c4fe07b24f92f466dc_jpg_3.pkl

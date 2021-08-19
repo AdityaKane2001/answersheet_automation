@@ -1,0 +1,1 @@
+1,0,88,12,1,0,87,0,87,11,1,11,ateeeeeerdy,the,0.5540880560874939,0.11682331697507338,0.5287729054689407,/content/outputs/inference/answersheet/model_finetune_640_results/res_c847368503e081ad046e4509c0062872_jpg_0.pkl

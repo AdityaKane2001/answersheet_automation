@@ -1,0 +1,3 @@
+319,37,339,44,319,37,338,37,338,43,319,43,gdeeeaaaaa,for,0.6789055466651917,0.1264693893492222,0.6667127758264542,/content/outputs/inference/answersheet/model_finetune_640_results/res_d209056a0a4664fc8a6e175dddbb7af8_jpg_0.pkl
+305,0,380,11,307,0,376,0,376,10,307,10,tttbetttttogg,the,0.5163868069648743,0.13362186115521651,0.39530955255031586,/content/outputs/inference/answersheet/model_finetune_640_results/res_d209056a0a4664fc8a6e175dddbb7af8_jpg_1.pkl
+380,268,404,279,380,268,403,268,403,278,380,278,tlaaaeeeeettttttttttttttt,from,0.5516607761383057,0.17739283829927444,0.5782264918088913,/content/outputs/inference/answersheet/model_finetune_640_results/res_d209056a0a4664fc8a6e175dddbb7af8_jpg_2.pkl

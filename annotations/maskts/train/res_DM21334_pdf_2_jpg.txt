@@ -1,0 +1,10 @@
+34,49,117,64,34,49,116,49,116,63,34,63,lffeteeee,from,0.6085931062698364,0.1600678347878986,0.47793385237455366,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_0.pkl
+318,82,384,93,318,82,383,82,383,92,318,92,odeeaee,offee,0.6277340650558472,0.14618962045226777,0.5185636753837267,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_1.pkl
+202,72,270,83,202,72,268,72,268,81,202,81,tatfetp,from,0.5886751413345337,0.12590623646974564,0.5426350742578506,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_2.pkl
+297,383,353,395,297,383,352,383,352,394,297,394,efeeaee,sender,0.570702314376831,0.18323977291584015,0.5690915840012687,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_3.pkl
+134,137,202,150,134,137,201,137,201,149,134,149,hheeeee,from,0.554013729095459,0.25843300989695955,0.5740669444203377,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_4.pkl
+146,273,171,283,146,273,170,273,170,282,146,282,ttaeeeedddd,the,0.5357208251953125,0.22524844380942258,0.6004894226789474,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_5.pkl
+0,45,35,61,2,45,34,45,34,60,2,60,fffttoife,for,0.5074469447135925,0.13903467274374431,0.5316578969359398,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_6.pkl
+189,277,252,288,189,277,251,277,251,287,189,287,ssadae,sender,0.5402473211288452,0.15884065752228102,0.5443937203713826,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_7.pkl
+0,267,36,282,0,267,35,267,35,281,0,281,daabpp,date,0.5179944634437561,0.17006376385688782,0.533485896885395,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_8.pkl
+32,131,128,146,32,131,127,131,127,145,32,145,ffseeee,from,0.511348307132721,0.25883797236851286,0.5639911234378815,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21334_pdf_2_jpg_9.pkl

@@ -1,0 +1,2 @@
+68,13,128,24,68,13,127,13,127,23,68,23,leraaaaaaaaaaaeee,bread,0.6210893392562866,0.3364863413221696,0.36602647602558136,/content/outputs/inference/answersheet/model_finetune_640_results/res_553093625cb4fb6f92e102f7b4ca49f4_jpg_0.pkl
+46,11,65,23,46,11,64,11,64,22,46,22,2tttoosssssssssii,the,0.5818623900413513,0.31551604630316005,0.4710131473839283,/content/outputs/inference/answersheet/model_finetune_640_results/res_553093625cb4fb6f92e102f7b4ca49f4_jpg_1.pkl

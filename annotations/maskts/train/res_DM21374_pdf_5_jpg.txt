@@ -1,0 +1,3 @@
+127,297,169,309,127,297,168,297,168,308,127,308,toaoiaee,love,0.6990615725517273,0.21636898815631866,0.47633119821548464,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21374_pdf_5_jpg_0.pkl
+99,307,124,317,99,307,123,307,123,316,99,316,lllmneeeeee,from,0.6466811299324036,0.15372895043004642,0.6441115379333496,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21374_pdf_5_jpg_1.pkl
+102,376,219,390,102,376,218,376,218,389,102,389,eeeneeeeee,repersity,0.5086033940315247,0.14100677147507668,0.48871589452028275,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21374_pdf_5_jpg_2.pkl

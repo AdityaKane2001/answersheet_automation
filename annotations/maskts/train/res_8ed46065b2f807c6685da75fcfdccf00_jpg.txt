@@ -1,0 +1,1 @@
+140,347,221,362,140,347,220,347,220,361,140,361,faaaaiffeesee,sale,0.5109235048294067,0.1472843220600715,0.46295354664325716,/content/outputs/inference/answersheet/model_finetune_640_results/res_8ed46065b2f807c6685da75fcfdccf00_jpg_0.pkl

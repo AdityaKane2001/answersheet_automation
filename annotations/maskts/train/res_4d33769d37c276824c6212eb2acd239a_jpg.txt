@@ -1,0 +1,2 @@
+51,5,96,18,51,5,95,5,95,17,51,17,ssssssssaaaaae,from,0.5517206192016602,0.13172420167497226,0.6234440408647061,/content/outputs/inference/answersheet/model_finetune_640_results/res_4d33769d37c276824c6212eb2acd239a_jpg_0.pkl
+332,7,361,17,332,7,360,7,360,16,332,16,ffeettff,from,0.5798795819282532,0.18706801254302263,0.681217360496521,/content/outputs/inference/answersheet/model_finetune_640_results/res_4d33769d37c276824c6212eb2acd239a_jpg_1.pkl

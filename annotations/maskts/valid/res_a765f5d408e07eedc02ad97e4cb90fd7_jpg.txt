@@ -1,0 +1,3 @@
+95,88,152,100,95,88,150,88,150,98,95,98,aasaaa,anding,0.5859391093254089,0.27549029638369876,0.4385196013110025,/content/outputs/inference/answersheet/model_finetune_640_results/res_a765f5d408e07eedc02ad97e4cb90fd7_jpg_0.pkl
+135,33,159,42,135,33,158,33,158,41,135,41,fffffffaaaisedso,for,0.6779999136924744,0.25584764312952757,0.5751074254512787,/content/outputs/inference/answersheet/model_finetune_640_results/res_a765f5d408e07eedc02ad97e4cb90fd7_jpg_1.pkl
+93,30,117,42,93,30,116,30,116,41,93,41,aaooaaaf,of,0.5339649319648743,0.18765403609722853,0.42676260073979694,/content/outputs/inference/answersheet/model_finetune_640_results/res_a765f5d408e07eedc02ad97e4cb90fd7_jpg_2.pkl

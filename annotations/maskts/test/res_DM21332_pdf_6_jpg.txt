@@ -1,0 +1,2 @@
+176,48,202,59,176,48,201,48,201,58,176,58,aaeeeeeeeeeeeeeeeeeeeeeeeee,the,0.5023717284202576,0.14958898778314944,0.46230978332459927,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21332_pdf_6_jpg_0.pkl
+375,25,414,41,375,25,411,25,411,40,375,40,ee,from,0.6256343722343445,0.23479412496089935,0.5489982157945633,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21332_pdf_6_jpg_1.pkl

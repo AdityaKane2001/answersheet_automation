@@ -1,0 +1,3 @@
+260,185,310,197,260,185,308,185,308,195,260,195,sttttoeeae,chool,0.5855624675750732,0.09459646418690681,0.33189958582321805,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21317_pdf_2_jpg_0.pkl
+186,292,214,301,186,292,213,292,213,300,186,300,dbeeeeeaaaae,the,0.6500635147094727,0.15923587046563625,0.42704812437295914,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21317_pdf_2_jpg_1.pkl
+194,313,220,323,194,313,219,313,219,322,194,322,ddddbhhhhhhhhhhaeeehhaeoffaoocoonnneeeeeeeeee,bread,0.581566333770752,0.12854376518064076,0.35318238536516827,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21317_pdf_2_jpg_2.pkl

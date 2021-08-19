@@ -1,0 +1,2 @@
+141,384,258,396,141,384,257,384,257,395,141,395,eeeeooneatdee,coffee,0.7711822390556335,0.20411133823486474,0.49849334891353336,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21227_pdf_4_jpg_0.pkl
+258,241,309,252,258,241,308,241,308,251,258,251,seeoatoeeettttt,shot,0.5844076871871948,0.30302609701951344,0.5844086706638336,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21227_pdf_4_jpg_1.pkl

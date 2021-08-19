@@ -1,0 +1,7 @@
+43,18,98,32,43,18,97,18,97,31,43,31,tasss,state,0.6486648917198181,0.31400317549705503,0.41179397453864414,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21233_pdf_6_jpg_0.pkl
+40,48,125,63,42,48,124,48,124,62,42,62,thheeeaenooaaaaaaaaaannnddeed,from,0.6819344162940979,0.14125537409864622,0.5648265689611435,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21233_pdf_6_jpg_1.pkl
+98,22,192,42,98,21,191,26,190,42,98,36,aaeseae,sale,0.7694091796875,0.16063707215445383,0.38601803332567214,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21233_pdf_6_jpg_2.pkl
+115,26,188,39,115,26,187,26,187,38,115,38,iosalkkssdeseeeaee,restate,0.7944449782371521,0.16775696517692673,0.47533454466611147,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21233_pdf_6_jpg_3.pkl
+34,17,189,40,34,15,188,24,187,43,34,32,suaesee,stevers,0.6007737517356873,0.1949158012866974,0.4634844623506069,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21233_pdf_6_jpg_4.pkl
+118,43,140,56,118,43,139,43,139,55,118,55,tttttttttttttttttddddddddddededdsh,the,0.5074881911277771,0.26898151164984,0.510522834956646,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21233_pdf_6_jpg_5.pkl
+284,55,314,66,284,55,313,55,313,65,284,65,efeeeeeeeeeeee,re,0.5017127990722656,0.35589086530464037,0.46555932859579724,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21233_pdf_6_jpg_6.pkl

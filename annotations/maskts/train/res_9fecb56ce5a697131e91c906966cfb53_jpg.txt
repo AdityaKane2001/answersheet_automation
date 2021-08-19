@@ -1,0 +1,5 @@
+222,14,374,34,222,15,373,18,372,34,222,32,edeereeee,coffeen,0.6196284294128418,0.11506323350800408,0.4944382291287184,/content/outputs/inference/answersheet/model_finetune_640_results/res_9fecb56ce5a697131e91c906966cfb53_jpg_0.pkl
+51,14,108,26,53,14,107,14,107,25,53,25,mmmaepeaaakleeaaaeepppe,coffee,0.613051176071167,0.12360737472772598,0.4437128198998315,/content/outputs/inference/answersheet/model_finetune_640_results/res_9fecb56ce5a697131e91c906966cfb53_jpg_1.pkl
+53,14,80,23,55,14,79,14,79,22,55,22,saaapepppeea,sender,0.5707281231880188,0.10195156124730904,0.5403520124299186,/content/outputs/inference/answersheet/model_finetune_640_results/res_9fecb56ce5a697131e91c906966cfb53_jpg_2.pkl
+36,91,51,99,36,91,50,91,50,98,36,98,aaaaaaaaaaatttttttttntnn,all,0.5358265042304993,0.2596375687668721,0.6062493324279785,/content/outputs/inference/answersheet/model_finetune_640_results/res_9fecb56ce5a697131e91c906966cfb53_jpg_3.pkl
+120,14,146,24,120,14,145,14,145,23,120,23,csaaaaaaaaaaaaeey,come,0.5349875092506409,0.0961425764595761,0.39479743838310244,/content/outputs/inference/answersheet/model_finetune_640_results/res_9fecb56ce5a697131e91c906966cfb53_jpg_4.pkl

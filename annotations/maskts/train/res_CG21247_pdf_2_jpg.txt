@@ -1,0 +1,1 @@
+280,18,341,30,280,18,340,18,340,29,280,29,feeeedee,from,0.5631980895996094,0.11302730906754732,0.6072954654693603,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_2_jpg_0.pkl

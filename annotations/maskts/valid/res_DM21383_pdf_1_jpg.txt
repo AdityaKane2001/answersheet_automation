@@ -1,0 +1,5 @@
+75,140,127,153,75,140,126,140,126,152,75,152,aaaaaaa,subject,0.7576806545257568,0.1467411975775446,0.517519423738122,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21383_pdf_1_jpg_0.pkl
+208,164,271,178,208,166,270,166,270,177,208,177,teeeaae,subjation,0.5706720352172852,0.21464952187878744,0.5324974298477173,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21383_pdf_1_jpg_1.pkl
+153,144,213,157,153,144,211,144,211,155,153,155,baaahee,subject,0.6420559287071228,0.2154604537146432,0.4485287107527256,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21383_pdf_1_jpg_2.pkl
+25,25,105,39,25,25,104,25,104,38,25,38,foeaaee,from,0.5257111191749573,0.2701269281761987,0.6404306441545486,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21383_pdf_1_jpg_3.pkl
+131,165,153,174,131,165,152,165,152,173,131,173,aae,date,0.5220388174057007,0.15784693012634912,0.5377028197050094,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21383_pdf_1_jpg_4.pkl

@@ -1,0 +1,2 @@
+239,263,292,275,239,263,290,263,290,273,239,273,beeattddedd,bread,0.537233293056488,0.10471636937423186,0.36498556286096573,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21338_pdf_2_jpg_0.pkl
+325,155,411,168,327,155,410,155,410,167,327,167,seeeeee,from,0.5641335248947144,0.16707113172326768,0.5189764618873596,/content/outputs/inference/answersheet/model_finetune_640_results/res_DM21338_pdf_2_jpg_1.pkl

@@ -1,0 +1,10 @@
+136,155,229,169,136,155,228,155,228,168,136,168,eaoootsocoeet,restarden,0.5133470296859741,0.16278051298398238,0.4549818947911263,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_0.pkl
+9,25,53,40,9,25,52,25,52,39,9,39,oofeeeee,offee,0.6758692264556885,0.23431666381657124,0.6901108374198278,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_1.pkl
+122,265,206,278,122,265,205,265,205,277,122,277,satthsaoeaaatheeaae,shop,0.5422107577323914,0.11033747541277032,0.33306909203529356,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_2.pkl
+231,23,282,35,231,23,281,23,281,34,231,34,ooe,from,0.6617403030395508,0.09767813483874004,0.6407736569643021,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_3.pkl
+150,205,196,217,152,205,195,205,195,216,152,216,tdtaaaaaeeeddddl,from,0.5879430770874023,0.1582050365395844,0.6052724123001099,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_4.pkl
+284,296,303,308,284,296,302,296,302,307,284,307,eaaaaaeeatttt,come,0.5280135869979858,0.2369357060927611,0.39581917226314545,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_5.pkl
+226,294,281,307,226,294,280,294,280,306,226,306,eetttad,bread,0.5962568521499634,0.15586558090788977,0.39827526609102887,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_6.pkl
+126,137,198,150,126,137,197,137,197,149,126,149,eeeesshedyanoayyyy,shops,0.6033915281295776,0.2343678486843904,0.3747800663113594,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_7.pkl
+60,27,136,38,60,27,135,27,135,37,60,37,tooe,from,0.6019578576087952,0.1311777774244547,0.6218816041946411,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_8.pkl
+294,19,362,30,294,19,360,19,360,28,294,28,tttettttttttttthteeeeee,the,0.5238409042358398,0.2782324471551439,0.5605804435908794,/content/outputs/inference/answersheet/model_finetune_640_results/res_CG21247_pdf_1_jpg_9.pkl

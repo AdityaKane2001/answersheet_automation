@@ -1,0 +1,4 @@
+85,26,164,40,85,26,163,26,163,39,85,39,tssseetttaayfee,street,0.7365992069244385,0.28472367574771246,0.48017830720969606,/content/outputs/inference/answersheet/model_finetune_640_results/res_f2ad7a7d8231721d3873b498d4d8bd21_jpg_0.pkl
+224,24,415,41,224,26,412,26,412,40,224,40,aeeeteieieettne,coffeen,0.5413005352020264,0.1356814165910085,0.42544906958937645,/content/outputs/inference/answersheet/model_finetune_640_results/res_f2ad7a7d8231721d3873b498d4d8bd21_jpg_1.pkl
+273,3,383,16,273,3,382,3,382,15,273,15,eeeeetteetaaeeeneeet,collect,0.5615926384925842,0.15897571071982383,0.43021646700799465,/content/outputs/inference/answersheet/model_finetune_640_results/res_f2ad7a7d8231721d3873b498d4d8bd21_jpg_2.pkl
+166,8,215,17,166,8,212,8,212,16,166,16,fteeeeeeeeet,from,0.628607988357544,0.170429652556777,0.5711196094751358,/content/outputs/inference/answersheet/model_finetune_640_results/res_f2ad7a7d8231721d3873b498d4d8bd21_jpg_3.pkl
