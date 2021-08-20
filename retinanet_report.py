@@ -47,3 +47,18 @@ retinanet.module.freeze_bn()
 
 csv_eval.evaluate(dataset_val,df_save_path=parser.df_save_path,retinanet = retinanet,iou_threshold=float(parser.iou_threshold),save_path=parser.PR_save_path)
 
+dataset = 'valid'
+ret = RetinaConverter('./annotations/gt/%s_annotations.csv'%dataset)
+gt = ret()
+
+# predret =
+predret = RetinaConverter('%s_predictions.csv'%(dataset))
+predicted = predret()
+# pred_craft = CRAFTConverter('./craft/%s'%dataset)
+# craft_annots = pred_craft()
+# yolopredret = YOLOConverter('yolo/05/yolo_%s_labels/labels'%dataset)
+# yolo_annots = yolopredret()
+evaluate(gt, predicted, 0.5, 0.5)
+
+
+

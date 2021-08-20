@@ -182,6 +182,7 @@ def _get_detections(dataset, retinanet, score_threshold=0.05, max_detections=100
             save_dict['x2'] = []
             save_dict['y1'] = []
             save_dict['y2'] = []
+            save_dict['conf'] = []
 
         for index in range(len(dataset)):
             data = dataset[index]
@@ -219,6 +220,7 @@ def _get_detections(dataset, retinanet, score_threshold=0.05, max_detections=100
                         save_dict['x2'].append(image_boxes[i,1])
                         save_dict['y1'].append(image_boxes[i,2])
                         save_dict['y2'].append(image_boxes[i,3])
+                        save_dict['conf'].append(scores[i])
 
                 image_scores     = scores[scores_sort]
                 image_labels     = labels[indices[scores_sort]]
@@ -235,7 +237,7 @@ def _get_detections(dataset, retinanet, score_threshold=0.05, max_detections=100
             print('{}/{}'.format(index + 1, len(dataset)), end='\r')
     if save_path!=None:
         df = pd.DataFrame(save_dict)
-        df.to_csv(save_path)
+        df.to_csv(save_path,header=None,index=False)
     return all_detections
 
 
