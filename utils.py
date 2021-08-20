@@ -284,11 +284,36 @@ def get_num_bbox(annot_dict):
     return num
 
 
+def calculate_map(tp_list, fp_list, num_tp, num_fp, num_annots):
+    tp_cumsum = np.cumsum(tp_list)
+    fp_cumsum = np.cumsum(fp_list)
+
+    recall = tp_cumsum/ num_annots
+    precision = tp_cumsum/ (num_tp+ num_fp)
+
+    mrec = np.concatenate(([0.], recall, [1.]))
+    mpre = np.concatenate(([0.], precision, [0.]))
+
+    # compute the precision envelope
+    for i in range(mpre.size - 1, 0, -1):
+        mpre[i - 1] = np.maximum(mpre[i - 1], mpre[i])
+
+    # to calculate area under PR curve, look for points
+    # where X axis (recall) changes value
+    i = np.where(mrec[1:] != mrec[:-1])[0]
+
+    # and sum (\Delta recall) * prec
+    ap = np.sum((mrec[i + 1] - mrec[i]) * mpre[i + 1])
+    return ap
+
 def evaluate(gt, predicted, iou_threshold=0.5, conf_thresh=0.05):
     print('Running tests...')
     false_negatives = get_false_negatives(gt, predicted)
     false_positives = 0
     true_positives = 0
+    false_positves_list = []
+    true_positives_list = []
+
 
     num_gt_annots = 0
     num_pred_annots = 0
@@ -312,17 +337,22 @@ def evaluate(gt, predicted, iou_threshold=0.5, conf_thresh=0.05):
 
         overlaps = compute_overlap(gt_annots, pred_annots)  # (gt_len,pred_len)
 
-        print(overlaps)
+        # print(overlaps)
 
         if isempty(gt_annots):
             false_positives += pred_annots.shape[0]
+            false_positves_list.append(pred_annots.shape[0])
 
         else:
 
             num_gt_annots += len(gt_annots)
 
             true_positives += len(np.where(overlaps > iou_threshold)[0])
+            true_positives_list.append(len(np.where(overlaps > iou_threshold)[0]))
             false_positives += get_false_positives(overlaps, iou_threshold)
+            false_positves_list.append(get_false_positives(overlaps, iou_threshold))
+
+    print("mAP:", calculate_map(true_positives_list, false_positves_list,true_positives,false_positives, num_gt_annots) )
 
     print()
     print('True positives: ', true_positives)
@@ -412,9 +442,8 @@ def mask_evaluate(gt, predicted, iou_threshold=0.5):
             overlaps = compute_quad_overlap(gt_annots, pred_annots)
             true_positives += len(np.where(overlaps > iou_threshold)[0])
 
-            print(gt_annots)
+
             print()
-            print(pred_annots)
 
             false_positives += get_false_positives(overlaps, iou_threshold)
     print('True positives: ', true_positives)

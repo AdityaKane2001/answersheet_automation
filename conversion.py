@@ -105,7 +105,7 @@ class RetinaConverter(Converter):
                     except:
                         conf = 1.0
                     annots.append([x1, y1, x2, y2, conf])
-                    print([x1, y1, x2, y2, conf])
+                    
                 annots = np.array(annots)
 
                 annotations[i.split('/')[-1]] = annots
@@ -122,11 +122,11 @@ class RetinaConverter(Converter):
                     except:
                         conf = 1.0
                     annots.append([x1, y1, x2, y2, conf])
-                    print([x1, y1, x2, y2, conf])
+                    
                     annotations[i.split('/')[-1]] = np.array(annots)
                 except:
                     pass
-        print(annotations)
+        
         return annotations
 
 
