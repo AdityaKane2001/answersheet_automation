@@ -48,11 +48,11 @@ retinanet.module.freeze_bn()
 csv_eval.evaluate(dataset_val,df_save_path=parser.df_save_path,retinanet = retinanet,iou_threshold=float(parser.iou_threshold),save_path=parser.PR_save_path)
 
 dataset = 'valid'
-ret = RetinaConverter('./annotations/gt/%s_annotations.csv'%dataset)
+ret = RetinaConverter('/content/annotations/gt/%s_annotations.csv'%dataset)
 gt = ret()
 
 # predret =
-predret = RetinaConverter('%s_predictions.csv'%(dataset))
+predret = RetinaConverter('/content/%s_predictions.csv'%(dataset))
 predicted = predret()
 # pred_craft = CRAFTConverter('./craft/%s'%dataset)
 # craft_annots = pred_craft()

@@ -91,23 +91,24 @@ class RetinaConverter(Converter):
         annotations = dict()
         for i in img_names:
             part = df.loc[df[0] == i]
-            print(part)
+            
             if len(part) > 1:
                 annots = []
 
                 for j in part.iterrows():
-                    x1 = float(j[1][1]) #* 640
-                    y1 = float(j[1][2]) #* 640
-                    x2 = float(j[1][3]) #* 640
-                    y2 = float(j[1][4]) #* 640
+                    x1 = float(j[1][1]) #* 640/416
+                    y1 = float(j[1][2]) #* 640/416
+                    x2 = float(j[1][3]) #* 640/416
+                    y2 = float(j[1][4]) #* 640/416
                     try:
                         conf = float(j[1][5])
                     except:
                         conf = 1.0
                     annots.append([x1, y1, x2, y2, conf])
+                    print([x1, y1, x2, y2, conf])
                 annots = np.array(annots)
 
-                annotations[i.split('/')[3]] = annots
+                annotations[i.split('/')[-1]] = annots
             else:
                 try:
                     annots = []
@@ -121,10 +122,11 @@ class RetinaConverter(Converter):
                     except:
                         conf = 1.0
                     annots.append([x1, y1, x2, y2, conf])
-                    annotations[i.split('/')[3]] = np.array(annots)
+                    print([x1, y1, x2, y2, conf])
+                    annotations[i.split('/')[-1]] = np.array(annots)
                 except:
                     pass
-
+        print(annotations)
         return annotations
 
 

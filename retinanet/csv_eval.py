@@ -176,11 +176,12 @@ def _get_detections(dataset, retinanet, score_threshold=0.05, max_detections=100
     
     with torch.no_grad():
         if save_path!=None:
-            save_dict=dict()
+            from collections import OrderedDict
+            save_dict=OrderedDict()
             save_dict['image_name'] = []
             save_dict['x1'] = []
-            save_dict['x2'] = []
             save_dict['y1'] = []
+            save_dict['x2'] = []
             save_dict['y2'] = []
             save_dict['conf'] = []
 
@@ -217,8 +218,8 @@ def _get_detections(dataset, retinanet, score_threshold=0.05, max_detections=100
                     for i in range(len(image_boxes)):
                         save_dict['image_name'].append(data['image_path'])
                         save_dict['x1'].append(image_boxes[i,0])
-                        save_dict['x2'].append(image_boxes[i,1])
                         save_dict['y1'].append(image_boxes[i,2])
+                        save_dict['x2'].append(image_boxes[i,1])
                         save_dict['y2'].append(image_boxes[i,3])
                         save_dict['conf'].append(scores[i])
 
