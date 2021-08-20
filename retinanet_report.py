@@ -46,3 +46,4 @@ retinanet.eval()
 retinanet.module.freeze_bn()
 
 csv_eval.evaluate(dataset_val,df_save_path=parser.df_save_path,retinanet = retinanet,iou_threshold=float(parser.iou_threshold),save_path=parser.PR_save_path)
+
