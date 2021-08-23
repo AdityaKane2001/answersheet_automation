@@ -16,7 +16,6 @@ parser = argparse.ArgumentParser(description='Inference for retinanet.')
 parser.add_argument('--csv_annotations_path', help='Path to CSV annotations')
 parser.add_argument('--mode',default='retina',help="yolo/retinanet",type=str)
 parser.add_argument('--model_path', help='Path to model', type=str)
-parser.add_argument('--images_path',help='Path to images directory',type=str)
 parser.add_argument('--class_list_path',help='Path to classlist csv',type=str)
 parser.add_argument('--iou_threshold',help='IOU threshold used for evaluation',type=str, default='0.5')
 parser.add_argument('--PR_save_path',help='Path to store PR curve image',default=None)
@@ -47,17 +46,19 @@ retinanet.module.freeze_bn()
 
 csv_eval.evaluate(dataset_val,df_save_path=parser.df_save_path,retinanet = retinanet,iou_threshold=float(parser.iou_threshold),save_path=parser.PR_save_path)
 
-dataset = 'valid'
-ret = RetinaConverter('/content/annotations/gt/%s_annotations.csv'%dataset)
+dataset = parser.csv_annotations_path.split("/")[-1][:5].strip("_")
+
+ret = RetinaConverter(parser.csv_annotations_path)
 gt = ret()
 
-# predret =
-predret = RetinaConverter('/content/%s_predictions.csv'%(dataset))
-predicted = predret()
-# pred_craft = CRAFTConverter('./craft/%s'%dataset)
-# craft_annots = pred_craft()
-# yolopredret = YOLOConverter('yolo/05/yolo_%s_labels/labels'%dataset)
-# yolo_annots = yolopredret()
+predret = RetinaConverter(parser.df_save_path)
+retina_pred = predret()
+
+predmask = MaskTextConverter("/content/annotations/maskts/" + dataset)
+mask_pred = predmask()
+
+predcraft = CRAFTConverter()
+
 evaluate(gt, predicted, 0.5, 0.5)
 
 
