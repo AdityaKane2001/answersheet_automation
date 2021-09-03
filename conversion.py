@@ -151,15 +151,15 @@ class CRAFTConverter(Converter):
                     continue
 
                 nums = line.split(',')
-                x1 = float(nums[0]) * 640 / 416
-                y1 = float(nums[1]) * 640 / 416
-                x2 = float(nums[2]) * 640 / 416
-                y2 = float(nums[3]) * 640 / 416
+                x1 = float(nums[0]) #* 640 / 416
+                y1 = float(nums[1]) #* 640 / 416
+                x2 = float(nums[2]) #* 640 / 416
+                y2 = float(nums[3]) #* 640 / 416
 
-                x3 = float(nums[4]) * 640 / 416
-                y3 = float(nums[5]) * 640 / 416
-                x4 = float(nums[6]) * 640 / 416
-                y4 = float(nums[7]) * 640 / 416
+                x3 = float(nums[4]) #* 640 / 416
+                y3 = float(nums[5]) #* 640 / 416
+                x4 = float(nums[6]) #* 640 / 416
+                y4 = float(nums[7]) #* 640 / 416
                 annots.append([x1, y1, x2, y2, x3, y3, x4, y4])
                 # del nums,x,y,w,h
         return np.array(annots)
@@ -191,20 +191,20 @@ class MaskTextConverter(Converter):
                     continue
 
                 nums = line.split(',')
-                x1 = float(nums[0]) * 640 / 416
-                y1 = float(nums[1]) * 640 / 416
+                x1 = float(nums[0]) #* 640 / 416
+                y1 = float(nums[1]) #* 640 / 416
                 # x2 = float(nums[2]) * 640 / 416
                 # y2 = float(nums[3]) * 640 / 416
                 #
                 # x3 = float(nums[4]) * 640 / 416
                 # y3 = float(nums[5]) * 640 / 416
-                x4 = float(nums[6]) * 640 / 416
-                y4 = float(nums[7]) * 640 / 416
+                x4 = float(nums[6]) #* 640 / 416
+                y4 = float(nums[7]) #* 640 / 416
 
-                x5 = float(nums[8]) * 640 / 416
-                y5 = float(nums[9]) * 640 / 416
-                x6 = float(nums[10]) * 640 / 416
-                y6 = float(nums[11]) * 640 / 416
+                x5 = float(nums[8]) #* 640 / 416
+                y5 = float(nums[9]) #* 640 / 416
+                x6 = float(nums[10]) #* 640 / 416
+                y6 = float(nums[11]) #* 640 / 416
                 annots.append([x1, y1, x4, y4, x5, y5, x6, y6])
                 # del nums,x,y,w,h
         return np.array(annots)
