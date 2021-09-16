@@ -85,6 +85,25 @@ class InferenceDataset(Dataset):
 # dataset_val = CSVDataset(parser.csv_annotations_path, parser.class_list_path,
 #                          transform=transforms.Compose([Normalizer(), Resizer()]))
 
+class PostProcessor(object):
+    def __init__(self, images, boxes, conf_thresh=0.5):
+        self.images = images
+        self.boxes = boxes
+        self.conf_thresh = conf_thresh
+    
+    def nms(self):
+        final_pages = []
+        for i in range(len(self.boxes)):
+            final_boxes = []
+            for j in range(len(self.boxes[i][0])):
+                if self.boxes[i][0][j][-1] >= self.conf_thresh:
+                    final_boxes.append(self.boxes[i][0][j])
+            final_pages.append(final_boxes)
+        return final_pages
+
+    def cut_and_save(self):
+        pass
+    
 
 dataset_val = InferenceDataset(parser.pdf_location)
 
