@@ -48,18 +48,23 @@ csv_eval.evaluate(dataset_val,df_save_path=parser.df_save_path,retinanet = retin
 
 dataset = parser.csv_annotations_path.split("/")[-1][:5].strip("_")
 
-ret = RetinaConverter(parser.csv_annotations_path)
-gt = ret()
-
 predret = RetinaConverter(parser.df_save_path)
 retina_pred = predret()
 
 predmask = MaskTextConverter("/content/annotations/maskts/" + dataset)
 mask_pred = predmask()
 
-predcraft = CRAFTConverter()
+predcraft = CRAFTConverter("/content/annotations/craft/" + dataset)
+craft_pred = predcraft()
 
-evaluate(gt, predicted, 0.5, 0.5)
+print("RetinaNet (Our approach)...")
+evaluate(gt, retina_pred, 0.5, 0.5)
+
+print("Mask Text Spotter...")
+mask_evaluate(gt, mask_pred, 0.5)
+
+print("CRAFT...")
+craft_evaluate(gt, craft_pred, 0.5)
 
 
 

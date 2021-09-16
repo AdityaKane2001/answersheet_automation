@@ -441,10 +441,6 @@ def mask_evaluate(gt, predicted, iou_threshold=0.5):
             num_gt_annots += len(gt_annots)
             overlaps = compute_quad_overlap(gt_annots, pred_annots)
             true_positives += len(np.where(overlaps > iou_threshold)[0])
-
-
-            print()
-
             false_positives += get_false_positives(overlaps, iou_threshold)
     print('True positives: ', true_positives)
     print('False positives: ', false_positives)
