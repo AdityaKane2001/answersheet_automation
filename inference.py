@@ -13,6 +13,9 @@ import numpy as np
 from pdf2image import convert_from_path, convert_from_bytes
 from skimage.transform import rescale, resize
 
+from pprint import pprint
+
+
 parser = argparse.ArgumentParser(description='Inference for retinanet.')
 
 # parser.add_argument('--csv_annotations_path', help='Path to CSV annotations')
@@ -37,7 +40,7 @@ parser = parser.parse_args()
 
 def get_images_tensor(pdf_loc):
     images = [np.array(i) for i in convert_from_bytes(
-        open(pdf_loc, 'rb').read(), size=800)]
+        open(pdf_loc, 'rb').read(), size=(None, 800))]
     return images
 
 
@@ -49,6 +52,7 @@ class InferenceDataset(Dataset):
     def get_images_tensor(self, pdf_loc):
         images = [np.array(i) for i in convert_from_bytes(
             open(pdf_loc, 'rb').read(), size=800)]
+        self.raw_images = images
         images = self.resize_ims(images)
         return images
 
@@ -70,6 +74,9 @@ class InferenceDataset(Dataset):
         ret_dict['image_path'] = 'kernel_pdf'
         return ret_dict
 
+    def get_raw_ims(self):
+        return self.raw_images
+
     def resize_ims(self, images):
         images_arr = []
         for i in images:
@@ -85,12 +92,13 @@ class InferenceDataset(Dataset):
 # dataset_val = CSVDataset(parser.csv_annotations_path, parser.class_list_path,
 #                          transform=transforms.Compose([Normalizer(), Resizer()]))
 
+
 class PostProcessor(object):
     def __init__(self, images, boxes, conf_thresh=0.5):
         self.images = images
         self.boxes = boxes
         self.conf_thresh = conf_thresh
-    
+
     def nms(self):
         final_pages = []
         for i in range(len(self.boxes)):
@@ -102,8 +110,21 @@ class PostProcessor(object):
         return final_pages
 
     def cut_and_save(self):
-        pass
-    
+        boxes = self.nms(self.boxes)
+        page = 0
+        scale =
+        for i in range(len(self.images)):
+            cut = 0
+            if boxes[i] == []:
+                continue
+            else:
+                for j in self.boxes[i]
+                self.images[i]
+
+    def __call__(self):
+        self.pages = self.nms()
+        print(self.pages)
+
 
 dataset_val = InferenceDataset(parser.pdf_location)
 
@@ -127,4 +148,5 @@ retinanet.eval()
 retinanet.module.freeze_bn()
 
 boxes = csv_eval.get_detections(dataset_val, retinanet)
-print(boxes)
+
+ps = PostProcessor(dataset_val.get_raw_ims(), boxes)
