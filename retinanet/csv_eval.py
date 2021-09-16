@@ -42,7 +42,7 @@ def get_annots_from_txt(label_file_path):
     
     return scores, labels, boxes
 
-def _get_detections_from_txt(dataset, labels_dir, score_threshold=0.001, max_detections=100, save_path=None):
+def get_detections_from_txt(dataset, labels_dir, score_threshold=0.001, max_detections=100, save_path=None):
     
     #dataset_train = CSVDataset(train_file=parser.csv_train, class_list=parser.csv_classes,
     #                           transform=transforms.Compose([Normalizer(), Resizer()]))
@@ -157,7 +157,7 @@ def _compute_ap(recall, precision):
     return ap
 
 
-def _get_detections(dataset, retinanet, score_threshold=0.05, max_detections=100, save_path=None):
+def get_detections(dataset, retinanet, score_threshold=0.05, max_detections=100, save_path=None):
     """ Get the detections from the retinanet using the generator.
     The result is a list of lists such that the size is:
         all_detections[num_images][num_classes] = detections[num_detections, 4 + num_classes]
@@ -293,9 +293,9 @@ def evaluate(
 
     # gather all detections and annotations
     if mode=='retina':
-        all_detections     = _get_detections(generator, retinanet, score_threshold=score_threshold, max_detections=max_detections, save_path=df_save_path)
+        all_detections     = get_detections(generator, retinanet, score_threshold=score_threshold, max_detections=max_detections, save_path=df_save_path)
     else:
-        all_detections = _get_detections_from_txt(generator, labels_dir, score_threshold=score_threshold, max_detections=max_detections, save_path=save_path)
+        all_detections = get_detections_from_txt(generator, labels_dir, score_threshold=score_threshold, max_detections=max_detections, save_path=save_path)
     all_annotations    = _get_annotations(generator)
 
     average_precisions = {}
