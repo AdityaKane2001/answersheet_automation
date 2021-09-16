@@ -2,7 +2,9 @@ import cv2
 from conversion import *
 from shapely.geometry import Polygon
 
-eps = 10**-5
+eps = 10 ** -5
+
+
 def are_same(dict1, dict2):
     dict2_keys = dict2.keys()
     for i in dict1.keys():
@@ -65,11 +67,31 @@ def iou(boxA, boxB):
     return ret_iou
 
 
+def td_iou(boxA, boxB):
+    tsbox = Polygon([(boxA[0], boxA[1]), (boxA[2], boxA[3]),
+                    (boxA[4], boxA[5]), (boxA[6], boxA[7])])
+    gtbox = Polygon([(boxB[0], boxB[1]), (boxB[0], boxB[3]),
+                    (boxB[2], boxB[3]), (boxB[2], boxB[1])])
+
+    interarea = tsbox.intersection(gtbox).area
+    boxBArea = tsbox.area
+    return interarea / (boxBArea + eps)
+
+
 def compute_quad_overlap(a, b):
     overlap_matrix = np.zeros((a.shape[0], b.shape[0]))
     for i in range(len(a)):
         for j in range(len(b)):
             overlap_matrix[i, j] = quad_iou(a[i], b[j])
+    return overlap_matrix
+
+
+def td_overlap(tdbox, gtbox):
+    overlap_matrix = np.zeros((tdbox.shape[0], gtbox.shape[0]))
+    for i in range(len(tdbox)):
+        for j in range(len(gtbox)):
+            overlap_matrix[i, j] = td_iou(tdbox[i], gtbox[j])
+
     return overlap_matrix
 
 
@@ -94,12 +116,16 @@ def compute_hex_overlap(a, b):
 def draw_caption(image, box, caption, mode='up'):
     if mode == 'up':
         b = np.array(box).astype(int)
-        cv2.putText(image, caption, (b[0], b[1] - 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
-        cv2.putText(image, caption, (b[0], b[1] - 10), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1)
+        cv2.putText(image, caption, (b[0], b[1] - 10),
+                    cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
+        cv2.putText(image, caption, (b[0], b[1] - 10),
+                    cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1)
     if mode == 'down':
         b = np.array(box).astype(int)
-        cv2.putText(image, caption, (b[0], b[3] + 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
-        cv2.putText(image, caption, (b[0], b[3] + 10), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1)
+        cv2.putText(image, caption, (b[0], b[3] + 10),
+                    cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
+        cv2.putText(image, caption, (b[0], b[3] + 10),
+                    cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1)
 
 
 def draw_predictions(image_name, gt_boxes, pred_boxes):
@@ -118,7 +144,8 @@ def draw_predictions(image_name, gt_boxes, pred_boxes):
                 label_name = 'GT'
                 draw_caption(img, (x1, y1, x2, y2), label_name)
 
-                cv2.rectangle(img, (x1, y1), (x2, y2), color=(255, 0, 0), thickness=2)
+                cv2.rectangle(img, (x1, y1), (x2, y2),
+                              color=(255, 0, 0), thickness=2)
             except:
                 pass
 
@@ -133,7 +160,8 @@ def draw_predictions(image_name, gt_boxes, pred_boxes):
 
                 draw_caption(img, (x1, y1, x2, y2), 'Questions', mode='down')
 
-                cv2.rectangle(img, (x1, y1), (x2, y2), color=(0, 0, 255), thickness=2)
+                cv2.rectangle(img, (x1, y1), (x2, y2),
+                              color=(0, 0, 255), thickness=2)
             except:
                 pass
 
@@ -174,9 +202,11 @@ def box_pruning(boxes, conf_thresh=0.5):
     if boxes.shape != (0,):
         overlap = compute_overlap(boxes, boxes)
 
-        pruned_boxes = eliminate_overlaping_boxes(get_overlap_tuples(overlap), boxes)
+        pruned_boxes = eliminate_overlaping_boxes(
+            get_overlap_tuples(overlap), boxes)
 
-        pruned_boxes = eliminate_low_conf_boxes(pruned_boxes, conf_thresh=conf_thresh)
+        pruned_boxes = eliminate_low_conf_boxes(
+            pruned_boxes, conf_thresh=conf_thresh)
 
         return np.array(pruned_boxes)
     return boxes
@@ -205,13 +235,15 @@ def get_false_negatives(gt, pred):
 
             pred_annots = pred[pred_key[0]]
 
-            all_overlaps = [compute_overlap(np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
+            all_overlaps = [compute_overlap(
+                np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
 
             for k in all_overlaps:
                 are_zeros = k < 0.5
                 fn += len(np.where(np.all(are_zeros))[0])
 
     return fn
+
 
 def get_quad_false_negatives(gt, pred):
     fn = 0
@@ -227,13 +259,15 @@ def get_quad_false_negatives(gt, pred):
 
             pred_annots = pred[pred_key[0]]
 
-            all_overlaps = [compute_quad_overlap(np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
+            all_overlaps = [compute_quad_overlap(
+                np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
 
             for k in all_overlaps:
                 are_zeros = k < 0.5
                 fn += len(np.where(np.all(are_zeros))[0])
 
     return fn
+
 
 def get_hex_false_negatives(gt, pred):
     fn = 0
@@ -248,7 +282,8 @@ def get_hex_false_negatives(gt, pred):
 
             pred_annots = pred[pred_key[0]]
 
-            all_overlaps = [compute_hex_overlap(np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
+            all_overlaps = [compute_hex_overlap(
+                np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
 
             for k in all_overlaps:
                 are_zeros = k < 0.5
@@ -269,7 +304,8 @@ def get_craft_fn(gt, craft_pred):
 
             pred_annots = craft_pred[pred_key[0]]
 
-            all_overlaps = [compute_overlap(np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
+            all_overlaps = [compute_overlap(
+                np.array([gt_annots[k]]), pred_annots) for k in range(len(gt_annots))]
 
             for k in all_overlaps:
                 are_zeros = k < 0.5
@@ -288,8 +324,8 @@ def calculate_map(tp_list, fp_list, num_tp, num_fp, num_annots):
     tp_cumsum = np.cumsum(tp_list)
     fp_cumsum = np.cumsum(fp_list)
 
-    recall = tp_cumsum/ num_annots
-    precision = tp_cumsum/ (num_tp+ num_fp)
+    recall = tp_cumsum / num_annots
+    precision = tp_cumsum / (num_tp + num_fp)
 
     mrec = np.concatenate(([0.], recall, [1.]))
     mpre = np.concatenate(([0.], precision, [0.]))
@@ -306,6 +342,7 @@ def calculate_map(tp_list, fp_list, num_tp, num_fp, num_annots):
     ap = np.sum((mrec[i + 1] - mrec[i]) * mpre[i + 1])
     return ap
 
+
 def evaluate(gt, predicted, iou_threshold=0.5, conf_thresh=0.05):
     print('Running tests...')
     false_negatives = get_false_negatives(gt, predicted)
@@ -314,24 +351,21 @@ def evaluate(gt, predicted, iou_threshold=0.5, conf_thresh=0.05):
     false_positves_list = []
     true_positives_list = []
 
-
     num_gt_annots = 0
     num_pred_annots = 0
-    #print(gt)
-
+    # print(gt)
 
     for i in predicted.keys():
         gt_key = [key for key in gt.keys() if i[:25] in key]
 
         if gt_key == []:
-
             continue
         gt_annots = gt[gt_key[0]]
 
         pred_annots = predicted[i]
         pred_annots = box_pruning(pred_annots, conf_thresh=conf_thresh)
 
-        #draw_predictions(i, gt_annots, pred_annots)
+        # draw_predictions(i, gt_annots, pred_annots)
 
         num_pred_annots += pred_annots.shape[0]
 
@@ -348,11 +382,14 @@ def evaluate(gt, predicted, iou_threshold=0.5, conf_thresh=0.05):
             num_gt_annots += len(gt_annots)
 
             true_positives += len(np.where(overlaps > iou_threshold)[0])
-            true_positives_list.append(len(np.where(overlaps > iou_threshold)[0]))
+            true_positives_list.append(
+                len(np.where(overlaps > iou_threshold)[0]))
             false_positives += get_false_positives(overlaps, iou_threshold)
-            false_positves_list.append(get_false_positives(overlaps, iou_threshold))
+            false_positves_list.append(
+                get_false_positives(overlaps, iou_threshold))
 
-    print("mAP:", calculate_map(true_positives_list, false_positves_list,true_positives,false_positives, num_gt_annots) )
+    print("mAP:",
+          calculate_map(true_positives_list, false_positves_list, true_positives, false_positives, num_gt_annots))
 
     print()
     print('True positives: ', true_positives)
@@ -372,7 +409,6 @@ def craft_evaluate(gt, predicted, iou_threshold=0.5):
 
     num_gt_annots = 0
     num_pred_annots = 0
-
 
     for i in predicted.keys():
         gt_key = [key for key in gt.keys() if i[4:25] in key]
@@ -396,7 +432,7 @@ def craft_evaluate(gt, predicted, iou_threshold=0.5):
         else:
 
             num_gt_annots += len(gt_annots)
-            overlaps = compute_quad_overlap(gt_annots, pred_annots)
+            overlaps = td_overlap(pred_annots, gt_annots)
 
             true_positives += len(np.where(overlaps > iou_threshold)[0])
             false_positives += get_false_positives(overlaps, iou_threshold)
@@ -419,11 +455,14 @@ def mask_evaluate(gt, predicted, iou_threshold=0.5):
     num_pred_annots = 0
 
     for i in predicted.keys():
-        gt_key = [key for key in gt.keys() if i.strip('.txt') in key]
-        gt_annots = gt[gt_key[0]]
+
+        gt_key = [key for key in gt.keys() if i.strip('.txt')[3:] in key]
+        # print(gt_key)
         if gt_key == []:
             false_positives += len(predicted[i])
             continue
+        gt_annots = gt[gt_key[0]]
+
         pred_annots = predicted[i]
         # pred_annots = box_pruning(pred_annots, conf_thresh=conf_thresh)
 
@@ -439,8 +478,11 @@ def mask_evaluate(gt, predicted, iou_threshold=0.5):
         else:
 
             num_gt_annots += len(gt_annots)
-            overlaps = compute_quad_overlap(gt_annots, pred_annots)
+            overlaps = td_overlap(pred_annots, gt_annots)
+            # print(overlaps)
+
             true_positives += len(np.where(overlaps > iou_threshold)[0])
+
             false_positives += get_false_positives(overlaps, iou_threshold)
     print('True positives: ', true_positives)
     print('False positives: ', false_positives)

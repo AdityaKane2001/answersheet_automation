@@ -46,6 +46,9 @@ retinanet.module.freeze_bn()
 
 csv_eval.evaluate(dataset_val,df_save_path=parser.df_save_path,retinanet = retinanet,iou_threshold=float(parser.iou_threshold),save_path=parser.PR_save_path)
 
+ret = RetinaConverter("/content/annotations/gt/" + dataset)
+gt = ret()
+
 dataset = parser.csv_annotations_path.split("/")[-1][:5].strip("_")
 
 predret = RetinaConverter(parser.df_save_path)
