@@ -15,7 +15,6 @@ from skimage.transform import rescale, resize
 
 from pprint import pprint
 
-
 parser = argparse.ArgumentParser(description='Inference for retinanet.')
 
 # parser.add_argument('--csv_annotations_path', help='Path to CSV annotations')
@@ -40,7 +39,7 @@ parser = parser.parse_args()
 
 def get_images_tensor(pdf_loc):
     images = [np.array(i) for i in convert_from_bytes(
-        open(pdf_loc, 'rb').read(), size=(None, 800))]
+        open(pdf_loc, 'rb').read(), size=(800, None))]
     return images
 
 
@@ -51,17 +50,17 @@ class InferenceDataset(Dataset):
 
     def get_images_tensor(self, pdf_loc):
         images = [np.array(i) for i in convert_from_bytes(
-            open(pdf_loc, 'rb').read(), size=800)]
+            open(pdf_loc, 'rb').read(), size=(800, None))]
         self.raw_images = images
         images = self.resize_ims(images)
         return images
 
-    def get_scales(self):
+    def _get_scales(self):
         scales = []
         for i in range(len(self.images)):
             imshape = self.images[i].shape
             scales.append(imshape[1]/imshape[0])
-
+        self.scales = np.array(scales)
         return np.array(scales)
 
     def num_classes(self):
@@ -76,6 +75,9 @@ class InferenceDataset(Dataset):
 
     def get_raw_ims(self):
         return self.raw_images
+
+    def get_scales(self):
+        return self._get_scales()
 
     def resize_ims(self, images):
         images_arr = []
@@ -98,6 +100,7 @@ class PostProcessor(object):
         self.images = images
         self.boxes = boxes
         self.conf_thresh = conf_thresh
+        self.scales = [i.shape[1]/i.shape[0] for i in self.images]
 
     def nms(self):
         final_pages = []
@@ -110,20 +113,42 @@ class PostProcessor(object):
         return final_pages
 
     def cut_and_save(self):
-        boxes = self.nms(self.boxes)
+        boxes = self.nms()
+        # print(boxes)
         page = 0
-        scale =
+        cuts = [np.ones((1, 800, 3))]
         for i in range(len(self.images)):
-            cut = 0
+            image = self.images[i][:, :800, :]
+            # print(image.shape)
             if boxes[i] == []:
-                continue
+                print(image.shape)
+                cuts[-1] = np.concatenate((cuts[-1], image))
             else:
-                for j in self.boxes[i]
-                self.images[i]
+                # print(np.vstack(boxes[i]))
+                boxesT = np.transpose(np.vstack(boxes[i]))
+
+                ys = boxesT[1]
+                print(self.scales)
+                sorted_ys = np.round(np.sort(ys) / self.scales[i])
+                sorted_ys = sorted_ys.astype(int).tolist()
+                sorted_ys.insert(0, 0)
+                sorted_ys.append(image.shape[0])
+                print(sorted_ys)
+                for j in range(len(sorted_ys)-1):
+                    # print(self.images[i].shape)
+                    # print("Cut:", cuts[-1].shape)
+
+                    if j == 0:
+                        cuts[-1] = np.concatenate((cuts[-1],
+                                                  image[sorted_ys[j]:sorted_ys[j+1]]), axis=0)
+                    cuts.append(image[sorted_ys[j]:sorted_ys[j+1]])
+        for cut in cuts:
+            cv2.imwrite()
+        return cuts
 
     def __call__(self):
         self.pages = self.nms()
-        print(self.pages)
+        print(self.cut_and_save())
 
 
 dataset_val = InferenceDataset(parser.pdf_location)
@@ -149,4 +174,5 @@ retinanet.module.freeze_bn()
 
 boxes = csv_eval.get_detections(dataset_val, retinanet)
 
-ps = PostProcessor(dataset_val.get_raw_ims(), boxes)
+ps = PostProcessor(dataset_val.get_raw_ims(), boxes,)
+ps()
