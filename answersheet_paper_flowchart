@@ -1,1 +1,48 @@
-<mxfile host="app.diagrams.net" modified="2021-09-18T11:15:15.025Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" version="15.2.7" etag="TjORTtJC7SLP0wTe3hY2" type="github"><diagram id="ngeYQeAp24OrWoE5GS8W">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-09-18T11:27:27.447Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="ZGkdwvK-NlaxldkrhqOh" version="15.2.7" type="github">
+  <diagram id="ngeYQeAp24OrWoE5GS8W" name="Page-1">
+    <mxGraphModel dx="1038" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V16rBISPKFsbjsin1zA0-17" value="" style="rounded=0;whiteSpace=wrap;html=1;glass=0;shadow=0;sketch=0;opacity=80;strokeWidth=1;labelBorderColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="190" y="166.25" width="440" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-2" value="Handwritten answer sheets" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/files-folders-3/24/files-folders-52-128.png" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=default;" edge="1" parent="1" source="V16rBISPKFsbjsin1zA0-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="271" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-6" value="Resize and scale boxes to 640x640&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="232.5" width="160" height="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-7" value="Preprocessing" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="365" y="350" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-9" value="RetinaNet" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.deep_learning_amis;" vertex="1" parent="1">
+          <mxGeometry x="710" y="216.25" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-10" value="Train model" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="340" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="V16rBISPKFsbjsin1zA0-11" target="V16rBISPKFsbjsin1zA0-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-11" value="Students" style="verticalLabelPosition=top;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=bottom;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon9;labelPosition=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="30" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.036;exitY=0.653;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="V16rBISPKFsbjsin1zA0-2" target="V16rBISPKFsbjsin1zA0-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="V16rBISPKFsbjsin1zA0-13" target="V16rBISPKFsbjsin1zA0-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V16rBISPKFsbjsin1zA0-13" value="Convert PDFs to images&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="232.5" width="160" height="77.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
