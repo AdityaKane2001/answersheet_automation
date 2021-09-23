@@ -121,19 +121,19 @@ class PostProcessor(object):
             image = self.images[i][:, :800, :]
             # print(image.shape)
             if boxes[i] == []:
-                print(image.shape)
+                # print(image.shape)
                 cuts[-1] = np.concatenate((cuts[-1], image))
             else:
                 # print(np.vstack(boxes[i]))
                 boxesT = np.transpose(np.vstack(boxes[i]))
 
                 ys = boxesT[1]
-                print(self.scales)
+                # print(self.scales)
                 sorted_ys = np.round(np.sort(ys) / self.scales[i])
                 sorted_ys = sorted_ys.astype(int).tolist()
                 sorted_ys.insert(0, 0)
                 sorted_ys.append(image.shape[0])
-                print(sorted_ys)
+                # print(sorted_ys)
                 for j in range(len(sorted_ys)-1):
                     # print(self.images[i].shape)
                     # print("Cut:", cuts[-1].shape)
@@ -141,14 +141,20 @@ class PostProcessor(object):
                     if j == 0:
                         cuts[-1] = np.concatenate((cuts[-1],
                                                   image[sorted_ys[j]:sorted_ys[j+1]]), axis=0)
-                    cuts.append(image[sorted_ys[j]:sorted_ys[j+1]])
-        for cut in cuts:
-            cv2.imwrite()
+                    else:
+                        cuts.append(image[sorted_ys[j]:sorted_ys[j+1]])
+
+        for num_cut in range(len(cuts)):
+            # print(cuts[num_cut].shape)
+            image_save = cuts[num_cut][:, :, ::-1]
+            cv2.imwrite(str(num_cut) + "_" +
+                        str(len(cuts)) + ".jpeg", image_save)
         return cuts
 
     def __call__(self):
         self.pages = self.nms()
-        print(self.cut_and_save())
+        self.cut_and_save()
+        print("Images saved")
 
 
 dataset_val = InferenceDataset(parser.pdf_location)

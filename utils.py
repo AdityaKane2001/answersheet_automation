@@ -387,11 +387,10 @@ def evaluate(gt, predicted, iou_threshold=0.5, conf_thresh=0.05):
             false_positives += get_false_positives(overlaps, iou_threshold)
             false_positves_list.append(
                 get_false_positives(overlaps, iou_threshold))
-
+    
     print("mAP:",
           calculate_map(true_positives_list, false_positves_list, true_positives, false_positives, num_gt_annots))
 
-    print()
     print('True positives: ', true_positives)
     print('False positives: ', false_positives)
     print('False negatives: ', false_negatives)

@@ -53,9 +53,15 @@ retinanet.module.freeze_bn()
 csv_eval.evaluate(dataset_val, df_save_path=parser.df_save_path, retinanet=retinanet,
                   iou_threshold=float(parser.iou_threshold), save_path=parser.PR_save_path)
 
+
 dataset = parser.csv_annotations_path.split("/")[-1][:5].strip("_")
 
-ret = RetinaConverter("/content/annotations/gt/" + dataset)
+iou = float(parser.iou)
+
+print()
+print()
+ret = RetinaConverter("/content/annotations/gt/" +
+                      dataset + "_annotations.csv")
 gt = ret()
 
 predret = RetinaConverter(parser.df_save_path)
@@ -68,10 +74,10 @@ predcraft = CRAFTConverter("/content/annotations/craft/" + dataset)
 craft_pred = predcraft()
 
 print("RetinaNet (Our approach)...")
-evaluate(gt, retina_pred, 0.5, 0.5)
-
+evaluate(gt, retina_pred, iou, 0.5)
+print()
 print("Mask Text Spotter...")
-mask_evaluate(gt, mask_pred, 0.5)
-
+mask_evaluate(gt, mask_pred, iou)
+print()
 print("CRAFT...")
-craft_evaluate(gt, craft_pred, 0.5)
+craft_evaluate(gt, craft_pred, iou)
