@@ -1,1 +1,62 @@
-<mxfile host="app.diagrams.net" modified="2021-10-03T06:30:25.883Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" version="15.3.5" etag="kQlPNO8hA3jzjANNluyi" type="github"><diagram id="uoc3yxfyblMlAmBbFPyY">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-10-03T07:06:11.235Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="tb3gi30x9r6AthmSH7TP" version="15.3.5" type="github">
+  <diagram id="uoc3yxfyblMlAmBbFPyY" name="Page-1">
+    <mxGraphModel dx="1278" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="IGpsE1jNQR0lYiTK_dAN-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="219.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-2" value="Students appear for exam" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=top;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon2;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="199" width="50" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-29" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="IGpsE1jNQR0lYiTK_dAN-3" target="IGpsE1jNQR0lYiTK_dAN-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/files-folders-3/24/files-folders-51-128.png;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-7" value="Multiple answersheets" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="390" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-9" value="" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=top;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon8;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="369.5" y="80" width="19.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-12" value="" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=top;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon8;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="369.5" y="320" width="19.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-13" value="" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=top;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon8;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="369.5" y="165.5" width="19.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-14" value="" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=top;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon8;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="369.5" y="240" width="19.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-23" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="IGpsE1jNQR0lYiTK_dAN-16" target="IGpsE1jNQR0lYiTK_dAN-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="191" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-16" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/files-folders-3/24/files-folders-51-128.png;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="155.5" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-27" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="IGpsE1jNQR0lYiTK_dAN-17" target="IGpsE1jNQR0lYiTK_dAN-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-17" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/files-folders-3/24/files-folders-51-128.png;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="230" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-28" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="IGpsE1jNQR0lYiTK_dAN-18" target="IGpsE1jNQR0lYiTK_dAN-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-18" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/files-folders-3/24/files-folders-51-128.png;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="310" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="IGpsE1jNQR0lYiTK_dAN-30" value="Multiple evaluators" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="319.25" y="390" width="120" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
