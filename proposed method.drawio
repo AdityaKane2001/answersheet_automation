@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2021-10-03T07:12:25.727Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="AjUsu8sg99-cIQs98nz2" version="15.3.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-03T07:16:45.290Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="IOK2SGZCzJeBIMb7-rCu" version="15.3.5" type="github">
   <diagram id="1GFvm7WI8pXbWNMv5hdf" name="Page-1">
     <mxGraphModel dx="1888" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="8TW0MvTD6ol2NgLv6qhU-1" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" edge="1" parent="1" source="8TW0MvTD6ol2NgLv6qhU-2">
+        <mxCell id="8TW0MvTD6ol2NgLv6qhU-44" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;entryX=-0.045;entryY=0.347;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8TW0MvTD6ol2NgLv6qhU-2" target="8TW0MvTD6ol2NgLv6qhU-50">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="220" as="targetPoint" />
+            <mxPoint x="-80" y="219" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="8TW0MvTD6ol2NgLv6qhU-2" value="Students appear for exam" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=top;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon2;hachureGap=4;" vertex="1" parent="1">
-          <mxGeometry x="-20" y="199" width="50" height="41" as="geometry" />
+          <mxGeometry x="-180" y="199" width="50" height="41" as="geometry" />
         </mxCell>
         <mxCell id="8TW0MvTD6ol2NgLv6qhU-5" value="Segregated, segmented&lt;br&gt;&amp;nbsp;questions" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="160" y="390" width="140" height="30" as="geometry" />
@@ -65,6 +65,18 @@
         </mxCell>
         <mxCell id="8TW0MvTD6ol2NgLv6qhU-42" value="Q4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="160" y="330" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8TW0MvTD6ol2NgLv6qhU-47" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="219.5" as="targetPoint" />
+            <mxPoint x="54" y="218.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8TW0MvTD6ol2NgLv6qhU-48" value="CNN segments questions&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-65" y="300.5" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8TW0MvTD6ol2NgLv6qhU-50" value="RetinaNet" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.deep_learning_amis;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="180" width="80" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
